@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosOption = {
-    baseURL: "'http://47.93.114.103:6688/manage",
+    baseURL: "/api",
     timeout: 5000
 }
 
@@ -9,6 +9,12 @@ const instance = axios.create(axiosOption);
 
 //request interceptor
 instance.interceptors.request.use(function(config) {
+    let token = localStorage.getItem('cms-token')
+    if (token) {
+        config.headers = {
+            'cms-token': token
+        }
+    }
     return config;
 }, function(error) {
     return Promise.reject(error);

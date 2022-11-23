@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import Router from './router';
-import 'antd/dist/antd.min.css';
+import './assests/base.less'
 
 
 ReactDOM.render( <

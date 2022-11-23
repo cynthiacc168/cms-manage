@@ -1,0 +1,88 @@
+@import '~antd/dist/antd.min.css'; //此处import有个波浪线
+
+@bgcolor:#efefef;
+@color-blue:#1890ff;
+
+body{
+    background-color: @bgcolor;
+}
+
+.layout{
+    height:100vh;
+}
+ 
+header{
+    height: 80px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+        height:80px;
+        padding-left:10px;
+    }
+    .right{
+        padding:10px 20px; 
+        .dropDown{
+            display: block;
+            height:60px;
+            color: black;
+            &:hover{
+                color: @color-blue;
+            }
+            .avatar{
+                display: inline-block;
+                width:35px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+            span{
+                line-height: 60px;
+            }
+        }
+
+    }
+    
+}
+
+footer{
+    height: 70px;
+    color: #fff;
+    background-color: #001529;
+    text-align: center;
+
+}
+
+.ant-layout-sider{
+    min-width: 250px !important;
+}
+
+.aside{
+    margin-top: 50px;
+}
+
+.content-body{
+    padding:20px 20px 30px 20px;
+    // display: flex;
+    // flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+
+    .breadCrumb{
+        height: 15px;
+        line-height: 15px;
+    }
+
+    .content-container{
+        background-color: #fff;
+        margin-top: 10px;
+        height: calc(100vh - 225px);
+    }
+}
+
+.table-link{
+    color: #333;
+    &:hover{
+        color: @color-blue;
+    }
+}
